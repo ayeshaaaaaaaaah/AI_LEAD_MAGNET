@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>60 Second AI Lead Magnet | TekzoTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0052CC",
+            navy: "#091E42",
+            page: "#F5F7FA",
+            success: "#36B37E",
+            purple: "#6554C0",
+          },
+          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          boxShadow: {
+            card: "0 4px 24px rgba(9, 30, 66, 0.06)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; }
+    .step-card { border-radius: 24px; box-shadow: 0 4px 24px rgba(9, 30, 66, 0.06); }
+    .step-num {
+      width: 40px; height: 40px; border-radius: 9999px;
+      background: #0052CC; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem;
+    }
+    .q-option:checked + label {
+      border-color: #0052CC;
+      background: rgba(0, 82, 204, 0.06);
+    }
+    .check-reveal { opacity: 0; transition: opacity 0.15s ease; }
+    .q-option:checked + label .check-reveal { opacity: 1; }
+  </style>
+</head>
+<body class="bg-page text-slate-600 antialiased min-h-screen">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-10 lg:py-14">
+    <header class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+      <p class="text-sm font-semibold tracking-wide text-primary uppercase mb-2">TekzoTech</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-navy leading-tight">
+        60 Second AI <span class="text-primary">Lead Magnet</span>
+      </h1>
+      <p class="mt-3 text-lg text-slate-500 font-medium">From visitor to qualified in one minute</p>
+      <p class="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed">
+        No boring forms, no long paragraphs. Just a quick URL or 5 easy answers and get an Instant Shop Health Report with estimated revenue.
+      </p>
+    </header>
+
+    <main class="bg-white step-card p-6 sm:p-8 lg:p-12">
+      <!-- Step 1: URL -->
+      <section id="panel-step1" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div class="lg:col-span-4">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">1</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Share your store</h2>
+              <p class="text-sm text-slate-500 mt-1">Enter your website URL</p>
+            </div>
+          </div>
+          <div class="mt-6 relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" aria-hidden="true">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </span>
+            <input id="store-url" type="text" placeholder="yourstore.com"
+              class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-200 text-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm" />
+            <p id="url-error" class="text-red-600 text-xs mt-2 hidden"></p>
+          </div>
+          <button type="button" id="btn-step1" class="mt-6 w-full sm:w-auto px-8 py-3 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-[#0747A6] transition shadow-sm">
+            Continue
+          </button>
+        </div>
+
+        <div class="lg:col-span-4 opacity-40 pointer-events-none lg:pointer-events-none" aria-hidden="true">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">2</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Answer 5 quick questions</h2>
+              <p class="text-sm text-slate-500 mt-1">Tell us about your store</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 opacity-40 pointer-events-none" aria-hidden="true">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">3</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Get your AI Health Report Instantly</h2>
+              <p class="text-sm text-slate-500 mt-1">Personalized insights and estimated revenue</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Questions -->
+      <section id="panel-step2" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mt-12 pt-12 border-t border-slate-100">
+        <div class="lg:col-span-4 opacity-60">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">1</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Share your store</h2>
+              <p class="text-sm text-slate-500 mt-1 truncate" id="summary-url">—</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">2</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Answer 5 quick questions</h2>
+              <p class="text-sm text-slate-500 mt-1">Select the best match for each</p>
+            </div>
+          </div>
+          <div id="questions-root" class="mt-6 space-y-4"></div>
+          <p id="quiz-error" class="text-red-600 text-xs mt-3 hidden"></p>
+          <button type="button" id="btn-generate" class="mt-6 w-full sm:w-auto px-8 py-3 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-[#0747A6] transition shadow-sm">
+            Generate report
+          </button>
+        </div>
+
+        <div class="lg:col-span-4 opacity-40 pointer-events-none" aria-hidden="true">
+          <div class="flex items-start gap-4">
+            <span class="step-num shrink-0">3</span>
+            <div>
+              <h2 class="text-lg font-bold text-primary">Get your AI Health Report Instantly</h2>
+              <p class="text-sm text-slate-500 mt-1">Personalized insights and estimated revenue</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Loading -->
+      <section id="panel-loading" class="hidden py-20 text-center">
+        <div class="inline-flex flex-col items-center gap-4">
+          <div class="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin" role="status" aria-label="Loading"></div>
+          <p class="text-navy font-semibold text-lg">Generating Report…</p>
+          <p class="text-sm text-slate-500 max-w-md">Analyzing your store signals and benchmarking against similar merchants.</p>
+        </div>
+      </section>
+
+      <!-- Step 3: Dashboard -->
+      <section id="panel-step3" class="hidden mt-12 pt-12 border-t border-slate-100">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+          <div class="lg:col-span-4 opacity-60">
+            <div class="flex items-start gap-4">
+              <span class="step-num shrink-0">1</span>
+              <div>
+                <h2 class="text-lg font-bold text-primary">Share your store</h2>
+                <p class="text-sm text-slate-500 mt-1 truncate" id="dash-url">—</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-4 opacity-60">
+            <div class="flex items-start gap-4">
+              <span class="step-num shrink-0">2</span>
+              <div>
+                <h2 class="text-lg font-bold text-primary">Questions complete</h2>
+                <p class="text-sm text-slate-500 mt-1">Profile captured</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-4">
+            <div class="flex items-start gap-4">
+              <span class="step-num shrink-0">3</span>
+              <div>
+                <h2 class="text-lg font-bold text-primary">Your AI Health Report</h2>
+                <p class="text-sm text-slate-500 mt-1">Personalized insights and estimated revenue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-slate-50/80 step-card border border-slate-100 p-6 sm:p-8 lg:p-10">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+            <span id="lead-pill" class="text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full bg-slate-200 text-slate-700">Lead: —</span>
+            <span class="text-xs text-slate-400">Live metrics from TekzoTech engine</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div>
+              <p class="text-sm font-medium text-slate-500">Shop Health Score</p>
+              <p class="mt-2 text-4xl sm:text-5xl font-bold text-success"><span id="metric-score">0</span><span class="text-2xl text-slate-400 font-semibold">/100</span></p>
+              <p class="mt-2 text-sm text-slate-500" id="metric-score-sub">—</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-slate-500">Estimated Monthly Revenue</p>
+              <p class="mt-2 text-4xl sm:text-5xl font-bold text-success" id="metric-revenue">$0</p>
+              <p class="mt-2 text-sm text-slate-500" id="metric-revenue-sub">—</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 class="text-sm font-bold text-navy mb-4">Top opportunities</h3>
+              <ul id="opportunities-list" class="space-y-3"></ul>
+            </div>
+            <div class="flex justify-center lg:justify-end">
+              <div class="relative w-[200px] h-[200px] shrink-0">
+                <svg id="donut-svg" viewBox="0 0 120 120" class="w-full h-full drop-shadow-sm" aria-label="Revenue opportunity breakdown">
+                  <!-- segments injected by script -->
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div class="w-[76px] h-[76px] rounded-full bg-white shadow-inner flex flex-col items-center justify-center text-center px-1">
+                    <span class="text-[9px] uppercase tracking-wide text-slate-400 leading-tight">Total lift</span>
+                    <span class="text-xs font-bold text-navy leading-tight mt-0.5" id="donut-center">+$0</span>
+                    <span class="text-[9px] text-slate-400">/ month</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-slate-200/80">
+            <div class="text-center sm:text-left">
+              <p class="text-xs font-medium text-slate-500">Traffic Score</p>
+              <p class="mt-1 text-lg font-bold text-primary"><span id="metric-traffic">0</span><span class="text-slate-400 font-semibold text-sm">/100</span></p>
+            </div>
+            <div class="text-center sm:text-left">
+              <p class="text-xs font-medium text-slate-500">Conversion Rate</p>
+              <p class="mt-1 text-lg font-bold text-success" id="metric-conversion">0%</p>
+            </div>
+            <div class="text-center sm:text-left">
+              <p class="text-xs font-medium text-slate-500">Site Speed</p>
+              <p class="mt-1 text-lg font-bold text-primary"><span id="metric-speed">0</span><span class="text-slate-400 font-semibold text-sm">/100</span></p>
+            </div>
+            <div class="text-center sm:text-left">
+              <p class="text-xs font-medium text-slate-500">Experience</p>
+              <p class="mt-1 text-lg font-bold text-success" id="metric-experience">—</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-10 pt-6 border-t border-slate-200/80">
+            <p class="text-xs text-slate-400">Generated by <span class="font-semibold text-slate-600">TekzoTech</span></p>
+            <button type="button" id="btn-reset" class="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
+              Start over
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Value banner -->
+      <div class="mt-10 lg:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-slate-50 border border-slate-100 px-6 py-5">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-purple/15 flex items-center justify-center text-purple font-bold text-sm border border-purple/20">60</div>
+          <p class="font-semibold text-navy">Done in 60 seconds</p>
+        </div>
+        <p class="text-sm text-slate-500 text-center sm:text-right">
+          <span class="text-slate-700 font-medium">Instant value</span>
+          <span class="mx-2 text-slate-300">/</span>
+          <span class="text-slate-700 font-medium">Real insights</span>
+          <span class="mx-2 text-slate-300">/</span>
+          <span class="text-slate-700 font-medium">More qualified leads</span>
+        </p>
+      </div>
+    </main>
+
+    <footer class="text-center mt-10 text-xs text-slate-400">
+      © TekzoTech — AI Lead Magnet demo. Connect MySQL (XAMPP) for persistence.
+    </footer>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
